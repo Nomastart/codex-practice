@@ -8,4 +8,11 @@ Name: Do not edit
 FilePath: /undefined/Users/a1234/codex-practice/hello.py
 Description: Do not edit
 '''
-print("hello codex")
+import sys
+
+
+if len(sys.argv) < 2:
+    print(f"用法: python {sys.argv[0]} <姓名>", file=sys.stderr)
+    sys.exit(1)
+
+print(f"Hello, {sys.argv[1]}")
